@@ -1,0 +1,538 @@
+:root {
+  --green-color: #cbe346;
+  --black-color: black;
+  --white-color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: HelveticaNeue, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  background-color: var(--black-color);
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/*NAVBAR*/
+.show {
+  display: flex !important;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line {
+  position: absolute;
+  width: 1px;
+  border: solid 2px #fff;
+  margin-left: 105px;
+  height: 100vw;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  margin-left: 140px;
+}
+
+nav ul li > a {
+  display: block;
+  position: relative;
+  padding: 20px 15px 10px 15px;
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+nav ul li .link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  background-color: var(--white-color);
+}
+
+nav ul li .link:hover::before {
+  transform: scaleX(1);
+}
+
+/******************MENU MOBILE**************/
+
+nav .mobile {
+  display: none;
+  width: 100%;
+}
+
+nav .mobile .header #bmenu {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  color: var(--black-color);
+}
+
+nav .mobile .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--green-color);
+}
+
+nav .mobile .header a {
+  display: inline-flex;
+  text-decoration: none;
+  padding: 5px;
+
+  color: var(--black-color);
+}
+
+nav .mobile .links {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 200;
+  display: none;
+  background-color: var(--green-color);
+}
+
+nav .mobile .links a {
+  font-size: 18px;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+
+  color: var(--black-color);
+}
+
+nav .mobile .links a:hover {
+  color: var(--black-color);
+  background-color: var(--white-color);
+}
+
+.logo-mobile {
+  width: 27px;
+  height: 27px;
+}
+
+/******************HEADER**************/
+header {
+  background-image: url(../img/group.jpg);
+  background-size: cover;
+  object-fit: contain;
+  width: 100%;
+  height: 100vh;
+  padding: 0 5%;
+}
+
+.tennis {
+  width: 37px;
+  object-fit: contain;
+  position: absolute;
+  margin-top: -11px;
+  margin-left: -10px;
+}
+
+/******************BANNER**************/
+
+#banner {
+  font-size: 53px;
+  width: 709px;
+  height: 257px;
+  position: absolute;
+  z-index: 100;
+  top: 200px;
+  left: 200px;
+  color: var(--white-color);
+}
+
+.tennis-text {
+  font-weight: bold;
+  color: var(--green-color);
+}
+
+.button-acerca {
+  border: 1px solid var(--white-color);
+  border-radius: 26.5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  padding: 15px 39px 15px 30px;
+  background-color: transparent;
+  color: var(--white-color);
+  font-weight: bolder;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/******************Raquetas Accesorios**************/
+.w-75 {
+  width: 75%;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 1.6em;
+  padding-top: 50px;
+}
+.p-1 {
+  margin-top: 20px;
+}
+
+#accesorios {
+  height: 392px;
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f3f4f8;
+  color: var(--black-color);
+}
+
+.tennis-accesorios {
+  width: 174px;
+  height: 33px;
+  margin: 32px 51px 101px 0;
+  font-family: HelveticaNeue;
+  font-size: 15px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: 1.87px;
+  text-align: right;
+  color: var(--green-color);
+  text-transform: uppercase;
+}
+
+.raquetas-accesorios {
+  margin: 0 0 15px 51px;
+  font-family: HelveticaNeue;
+  font-size: 50px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.14;
+  letter-spacing: -0.06px;
+  color: #1e2335;
+}
+
+.content-accesorios {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.conoce-accesorios {
+  text-align: justify;
+  width: 393px;
+  height: 87px;
+  margin: 15px 162px 0 51px;
+  font-family: HelveticaNeue;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.78;
+  letter-spacing: 0.51px;
+  color: #787878;
+}
+
+.button-historia {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 26.5px;
+  border: solid 1px #282e47;
+  color: var(--black-color);
+  font-size: 13px;
+  height: 53px;
+  margin: 49px 0 0;
+  padding: 15px 38px;
+  text-transform: uppercase;
+  width: 234px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/******************Nuestras Raquetas**************/
+#raquetas {
+  height: 392px;
+  background-color: #f3f4f8;
+  display: flex;
+}
+
+.info {
+  position: relative;
+}
+
+.ball-color {
+  width: 100%;
+  height: 100%;
+}
+
+.after {
+  position: absolute;
+  top: 300px;
+  left: 263px;
+  width: 54px;
+  height: 54px;
+}
+
+.nuestas-raquetas {
+  width: 259px;
+  height: 151px;
+  position: absolute;
+  top: 38px;
+  left: 150px;
+  font-size: 50px;
+  line-height: 1.28;
+  letter-spacing: -0.06px;
+  color: #fff;
+}
+.raquetas-span {
+  font-weight: bold;
+}
+
+.conoce-raquetas {
+  width: 303px;
+  height: 122px;
+  position: absolute;
+  top: 173px;
+  left: 150px;
+  font-family: HelveticaNeue;
+  font-size: 18px;
+  line-height: 1.67;
+  color: #fff;
+}
+
+.oval {
+  position: absolute;
+  top: 0;
+  height: 39px !important;
+  width: 39px !important;
+  border-radius: 50%;
+  background-color: var(--green-color);
+}
+
+.multiples-raquetas :nth-child(1) {
+  margin: 10px;
+  width: 288px;
+  height: 344px;
+}
+.multiples-raquetas :nth-child(2) {
+  margin: 10px;
+  width: 288px;
+  height: 344px;
+}
+.multiples-raquetas :nth-child(3) {
+  margin: 10px;
+  width: 212px;
+  height: 344px;
+}
+
+/******************Jugando Tennis**************/
+#tennis-cover {
+  height: 586px;
+  background-image: url(../src/img/action-athlete-ball-342361.png);
+  background-size: cover;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+/******************FOOTER**************/
+.footer {
+  width: 100%;
+  height: 203px;
+  background-color: var(--green-color);
+  position: relative;
+}
+
+.nav {
+  width: 451px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 78px;
+  padding-top: 64px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav ul li > a {
+  display: block;
+  position: relative;
+  padding: 20px 15px 10px 15px;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1.14px;
+  color: #2b3049;
+}
+
+.redes {
+  width: 100%;
+  height: 37px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding-top: 64px;
+  margin-left: 78px;
+}
+
+.footer-ball {
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  right: 63px;
+  top: 77px;
+}
+
+/******************MEDIAS**************/
+
+@media screen and (max-width: 1300px) {
+  #raquetas {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ball-color {
+    display: none;
+  }
+
+  .after {
+    display: none;
+  }
+
+  .multiples-raquetas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nuestas-raquetas {
+    top: -50px;
+    color: var(--black-color);
+  }
+
+  .conoce-raquetas {
+    top: -30px;
+    left: 600px;
+    color: var(--black-color);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    height: 70vh;
+  }
+
+  .line {
+    display: none;
+  }
+
+  #banner {
+    position: initial !important;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .button-acerca {
+    height: 30%;
+    color: var(--black-color);
+    background-color: var(--green-color);
+  }
+
+  footer {
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 904px) {
+  #banner {
+    height: 50vh;
+  }
+
+  .tennis {
+    display: none;
+  }
+
+  .raquetas-accesorios {
+    word-wrap: break-word;
+  }
+
+  #raquetas {
+    display: flex;
+    flex-direction: row;
+  }
+  .ball-color {
+    display: inline;
+    object-fit: contain;
+  }
+
+  .multiples-raquetas :nth-child(2) {
+    display: none;
+  }
+  .multiples-raquetas :nth-child(3) {
+    display: none;
+  }
+
+  .conoce-raquetas {
+    top: 280px;
+    left: 100px;
+    color: var(--black-color);
+  }
+
+  nav {
+    width: 100%;
+    padding: 0;
+  }
+  nav ul {
+    display: none;
+  }
+  nav .mobile {
+    display: block;
+  }
+
+  header {
+    background-position: center;
+    height: 50vh;
+  }
+
+  .footer-ball {
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 633px) {
+  .content-accesorios {
+    flex-direction: column;
+  }
+
+  .button-historia {
+    margin-top: -50px;
+    margin-left: 240px;
+  }
+}
